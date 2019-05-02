@@ -23,14 +23,14 @@ export class LoginComponent implements OnInit {
   private pass: string;
 
   public async consult_login() {
-   this.orderService.list().then(retorno => {
+    this.orderService.list().then(retorno => {
       retorno.retorno.map(ret => {
-        if(this.user === ret.client && this.pass === ret.password){
+        if (this.user === ret.client && this.pass === ret.password) {
           this.router.navigate(['/product']);
         }
       })
     })
-    await alert("Usuário ou Senha Ínvalidos");
+    alert("Usuário ou Senha Ínvalidos");
   }
 
   ngOnInit() {
