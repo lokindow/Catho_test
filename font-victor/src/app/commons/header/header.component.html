@@ -1,0 +1,16 @@
+<div class="header">
+	<div class="logo">
+		<a routerLink="resumo">
+			<img src="public/img/header.png" height="60px" />
+		</a>
+	</div>
+
+	<div class="menu">
+		<div class="item">
+			<div style="color: rgba(158, 156, 156, 0.9); display: inline-block; font-size: 2.5em">ADS</div>
+			<div class="datetime" style="font-style: italic; font-size: 12px ; color: white">{{time | date:'EEEE':'':'pt-BR'}}, {{time | date:'dd':'':'pt-BR'}}
+				de {{time | date:'MMMM':'':'pt-BR'}} de {{time | date:'yyyy':'':'pt-BR'}} - {{time | date:'HH:mm':'':'pt-BR'}}</div>
+		</div>
+	</div>
+	
+</div>

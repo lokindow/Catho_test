@@ -1,0 +1,124 @@
+<div class="doc-content container-fluid" *ngIf="selectE">
+    <amb-panel>
+        <div class="card" style="margin-top: 140px">
+
+            <div class="summary-panel">
+                <label for="">{{itemSelecionado.nome}}</label>
+            </div>
+            <div class="component">
+                <h2 class="subtitulo">PRODUCTS</h2>
+                <ul class="produtos_lista">
+
+                    <li class="grid-1-3">
+                        <div class="produtos_icone">
+                            <img src="public/img/1.png" alt="ADS">
+                        </div>
+                        <h3>Classic AD</h3>
+                        <p>Offers the most basic level of advertisement</p>
+                        <div style="margin: 0px auto; height: 20px; display: block">
+                            <amb-action-icon icon='fa fa-plus circle-icon' (click)="add('Classic')" color="white"
+                                padding="10px" backgroundColor="#cc2031"></amb-action-icon>
+                        </div>
+                    </li>
+
+                    <li class="grid-1-3">
+                        <div class="produtos_icone">
+                            <img src="public/img/2.png" alt="ADS">
+                        </div>
+                        <h3>Standout AD</h3>
+                        <p>Allows advertisers to use a company logo and use a longer presentation text</p>
+                        <div style="margin: 0px auto; height: 20px; display: block">
+                            <amb-action-icon icon='fa fa-plus circle-icon' (click)="add('Standout')" color="white"
+                                padding="10px" backgroundColor="#cc2031"></amb-action-icon>
+                        </div>
+                    </li>
+
+                    <li class="grid-1-3">
+                        <div class="produtos_icone">
+                            <img src="public/img/3.png" alt="ADS">
+                        </div>
+                        <h3>Premium AD</h3>
+                        <p>Same benefits as Standout Ad, but also puts the advertisement at the top of the results,
+                            allowing higher visibility</p>
+                        <div style="margin: 0px auto; height: 20px; display: block">
+                            <amb-action-icon icon='fa fa-plus circle-icon' (click)="add('Premium')" color="white"
+                                padding="10px" backgroundColor="#cc2031"></amb-action-icon>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="v-gap-10"></div>
+
+            <amb-separator></amb-separator>
+
+            <div style="float: right; height: 20px; margin-right: 15px">
+                <amb-action-icon icon='fa fa-check circle-icon' (click)="check()" color="white" padding="10px"
+                    ambTooltip="Submit" backgroundColor="#cc2031"></amb-action-icon>
+                <p>SUBTOTAL {{subtotal.toFixed(2)}}</p>
+            </div>
+            <div class="v-gap-10"></div>
+            <div class="v-gap-10"></div>
+            <div class="v-gap-10"></div>
+            <div class="v-gap-10"></div>
+            <!-- <div class="v-gap-10"></div>
+            <div class="v-gap-10"></div> -->
+
+        </div>
+    </amb-panel>
+</div>
+
+<div class="doc-content container-fluid">
+    <amb-panel>
+        <amb-modal-dialog #empresa_modal [renderer]="true" [modal]="true" [modalTitle]="title"
+            titleBackgroundColor="#333333" titleColor="black">
+            <amb-modal-dialog-message>
+
+                <div class="form block-b c-w">
+                    <label>JÁ É PARCEIRO ?</label>
+
+                    <amb-combobox id="comboEmpresa" (comboChange)="getItemSelecionado($event)">
+                        <amb-combobox-item *ngFor="let item of empresa" [model]="item" [value]="item.id"
+                            [label]="item.nome" [disabled]="item.disabled"></amb-combobox-item>
+                    </amb-combobox>
+
+                </div>
+
+                <div class="form block-b c-w">
+                    <label>NÃO</label>
+                    <input ambInputField [readonly]="false" value="" [(ngModel)]="user" type="text">
+                </div>
+
+                <div class="m-rigth block-b">
+                    <amb-action-icon (click)="userC()" id="iconAddNet" ambTooltip="Submit"
+                        icon='fa fa-check fa-1x circle-icon' padding="10px 11px" color="white"
+                        backgroundColor="#cc2031"></amb-action-icon>
+                </div>
+            </amb-modal-dialog-message>
+        </amb-modal-dialog>
+    </amb-panel>
+</div>
+
+<div class="doc-content container-fluid">
+    <amb-panel>
+        <amb-modal-dialog #confirm_modal [renderer]="false" [modal]="true" [modalTitle]="titlee"
+            titleBackgroundColor="#333333" titleColor="black">
+            <amb-modal-dialog-message>
+                <h2 class="subtitulo">ORDER CONFIRMED</h2>
+                <p>PRODUCT</p>
+                <p>CLASSIC:  {{typeC}}</p>
+                <p>STANDOUT : {{typeS}}</p>
+                <p>PREMIUM:  {{typeP}}</p>
+                <amb-separator></amb-separator>
+                <p>PRICE</p>
+                <p>DISCOUNT : ${{subtotal - total}}</p>
+                <p>TOTAL:  ${{total.toFixed(2)}}</p>
+                <div class="block-b" style="text-align: center">
+                    <amb-action-icon (click)="back()" id="iconAddNet" ambTooltip="Submit"
+                        icon='fa fa-check fa-1x circle-icon' padding="10px 11px" color="white"
+                        backgroundColor="#cc2031"></amb-action-icon>
+                </div>
+            </amb-modal-dialog-message>
+        </amb-modal-dialog>
+    </amb-panel>
+</div>

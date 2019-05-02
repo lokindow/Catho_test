@@ -1,0 +1,47 @@
+<div class="doc-content container-fluid" *ngIf="selectE">
+    <amb-panel>
+        <div class="card" style="margin-top: 140px">
+
+            <div class="summary-panel">
+                <label for="">STORE</label>
+            </div>
+            <div class="component">
+                <h2 class="subtitulo">TOTAL ORDER</h2>
+                <ul class="produtos_lista">
+
+                    <div class="grid-1-3" style="margin: 0px auto">
+                        <div class="produtos_icone">
+                            <img src="public/img/quest.png" alt="ADS">
+                        </div>
+                        <h3>Price</h3>
+                        <p>$220</p>
+                        <div style=" height: 20px; display: block">
+                            <amb-action-icon icon='fa fa-check circle-icon' (click)="confirm()" color="white"
+                                padding="10px" backgroundColor="#cc2031" ambTooltip="Confirm"></amb-action-icon>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <amb-separator></amb-separator>
+
+        </div>
+    </amb-panel>
+</div>
+
+<div class="doc-content container-fluid">
+    <amb-panel>
+        <amb-modal-dialog #confirmModal [renderer]="false" [modal]="true" [modalTitle]="title" titleBackgroundColor="#333333"
+            titleColor="black">
+            <amb-modal-dialog-message>
+                <h2 class="subtitulo">ORDER CONFIRMED</h2>
+
+                <div class="block-b" style="text-align: center">
+                    <amb-action-icon (click)="back()" id="iconAddNet" ambTooltip="Submit"
+                        icon='fa fa-check fa-1x circle-icon' padding="10px 11px" color="white"
+                        backgroundColor="#cc2031"></amb-action-icon>
+                </div>
+            </amb-modal-dialog-message>
+        </amb-modal-dialog>
+    </amb-panel>
+</div>

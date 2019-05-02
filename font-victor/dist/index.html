@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- <script>document.write('<base href="' + document.location + '"');</script> -->
+	<base href="/">
+	<title>Catho</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+	<style>
+		body {
+			background-color: #c3c3c3	
+		}	
+
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+			* {
+				-webkit-text-stroke: 0.12pt;
+			}
+			button span, .emulator-menu .emulator-menu-selected, .emulator-menu .emulator-menu-item {
+				-webkit-text-stroke: 0pt !important;
+			} 
+		}
+
+		.loading {
+			opacity: 0;
+			transition: opacity .8s ease-in-out;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+		}
+
+		ofer-app:empty+.loading {
+			opacity: 1;
+			z-index: 100;
+		}
+
+		.loader {
+			width: 100%;
+			height: 2px;
+			z-index: 9999;
+			top: 0px;
+			position: fixed;
+		}
+
+		.bar {
+			width: 0px;
+			height: 2px;
+			background-color: #0063c1;
+			z-index: 9999;
+			animation: bar 5s ease-out;
+			box-shadow: 0 0 10px 0;
+		}
+
+		@keyframes bar {
+			from {
+				width: 0px;
+			}
+			to {
+				width: 100%;
+			}
+		}
+	</style>
+<link href="/css/app.c45e03c52879166cb6fe.css" rel="stylesheet"></head>
+
+<body>
+	<!-- App -->
+	<main-app><main-app>
+
+	<div class="loading">
+		<div class="loader">
+			<div class="bar"></div>
+		</div>
+	</div>
+	
+<script type="text/javascript" src="/js/polyfills.js"></script><script type="text/javascript" src="/js/amb.js"></script><script type="text/javascript" src="/js/app.js"></script></body>
+
+</html>

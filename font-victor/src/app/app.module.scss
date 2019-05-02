@@ -1,0 +1,81 @@
+@import "styles/sass/_vars.scss";
+@import "styles/sass/_colors.scss";
+@import "styles/sass/_variables.scss";
+
+@import "~ng2-slim-loading-bar/bundles/style";
+
+body {
+  font-family: 'Roboto-Regular';
+  color: #333333;
+  background-color: "#c3c3c3";
+  margin: 0px !important;;
+  padding: 0px !important;
+  
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
+}::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
+}
+
+.main {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.slim-loading-bar {
+  top: 0px !important;
+  z-index: 9999;
+}
+
+.slim-loading-bar-progress {
+  box-shadow: 0 0 10px 0;
+  height: 2px !important;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+background: #eee;
+font-size: 13px !important;
+white-space: pre-wrap;
+font-family: 'Roboto-Regular' !important;
+font-weight: normal !important;
+background: #F2F2F2 !important;
+border-radius: 0px 0px 4px 4px;
+.hljs-keyword, .hljs-type, .hljs-class .hljs-title, .hljs-selector-tag, .hljs-subst {
+  font-family: 'Roboto-Bold' !important;
+  font-weight: normal !important;
+}
+.hljs-comment {
+  font-family: 'Roboto-Italic' !important;
+  font-style: normal !important;
+}
+}
+
+@media only screen and (max-width : 640px) {
+
+  .main {
+    padding: 14px;
+    margin: 0px 0px 0px 0px;
+    background-color: $white;
+  }
+  
+}

@@ -1,0 +1,22 @@
+<div class="doc-content container-fluid">
+    <amb-panel>
+        <amb-modal-dialog [renderer]="true" [modal]="true" [modalTitle]="title" titleBackgroundColor="#333333"
+            titleColor="black">
+            <amb-modal-dialog-message>
+                <div class="form">
+                    <label>User</label>
+                    <input ambInputField [readonly]="false" value="" [(ngModel)]="user" type="text">
+                </div>
+                <div class="form">
+                    <label>Password</label>
+                    <input ambInputField [readonly]="false" value="" [(ngModel)]="pass" type="password">
+                </div>
+                <div class="m-rigth">
+                    <amb-action-icon (click)="consult_login()" id="iconAddNet" ambTooltip="Submit"
+                        icon='fa fa-check fa-1x circle-icon' padding="10px 11px" color="white"
+                        backgroundColor="#cc2031"></amb-action-icon>
+                </div>
+            </amb-modal-dialog-message>
+        </amb-modal-dialog>
+    </amb-panel>
+</div>

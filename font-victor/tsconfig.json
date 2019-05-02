@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": "",
+    "paths": {
+      "@angular/*": [
+        "node_modules/@angular/*"
+      ],
+      "ngx-highlightjs/*": [
+        "node_modules/ngx-highlightjs/*"
+      ]
+    }
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }
+}
