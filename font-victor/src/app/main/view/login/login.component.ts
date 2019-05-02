@@ -23,10 +23,18 @@ export class LoginComponent implements OnInit {
   private pass: string;
 
   public consult_login() {
+    let count = 0;
+    let pass = false;
     this.orderService.list().then(retorno => {
+      let size = retorno.retorno.length;
       retorno.retorno.map(ret => {
         if (this.user === ret.client && this.pass === ret.password) {
           this.router.navigate(['/product']);
+          pass = true;
+        }
+        count++;
+        if (count >= size && pass === false) {
+          alert("Usuario ou senha invalidos")
         }
       })
     })
