@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   private user: string;
   private pass: string;
 
-  public async consult_login() {
+  public consult_login() {
     this.orderService.list().then(retorno => {
       retorno.retorno.map(ret => {
         if (this.user === ret.client && this.pass === ret.password) {
@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
         }
       })
     })
-    alert("Usuário ou Senha Ínvalidos");
   }
 
   ngOnInit() {

@@ -16,7 +16,8 @@ Empresa Catho com as tecnologias Nodejs + Mysql + Angular
 
 #### WebService
 * Com o banco de dados criado e populado
-  * Entrar na pasta "backend/enum", abrir o arquivo config.js e modificar os dados de acesso ao banco    
+  * Entrar na pasta "backend/enum", abrir o arquivo config.js e modificar os dados de acesso ao banco   
+  * Password pode ser alterada 
   * Padrão: Host: '127.0.0.1'   User: 'root'    Password: ''   Database: "catho"
   * Pode ser alterado no arquivo"
   * Depois de configurado, rode script "backend/index.js" pelo terminal
@@ -36,8 +37,8 @@ $ npm start
 * Abrirá o sistema no login 
    
 * Produtos
-* Fazer a adição dos produtos que mais agrada
-* Faz um subtotal sem os devidos abatimentos por regra
+  * Fazer a adição dos produtos que mais agrada
+  * Faz um subtotal sem os devidos abatimentos por regra
 
 * Confimação
   *Apresenta os descontos obtidos pelo desconto do plano
