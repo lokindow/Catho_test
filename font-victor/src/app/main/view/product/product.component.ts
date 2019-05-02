@@ -83,19 +83,16 @@ export class ProductComponent implements OnInit {
                 let parm = JSON.parse(resp.retorno.param)
                 if (resp.retorno.prefix == 'DISCOUNT') {
                     if (parm.product == product_n) {
-                        // console.log(parm.value);
                         that.total += parm.value;
                         that.total -= that.price;
                     }
                 } else if (resp.retorno.prefix == 'QUANTITY_DISCOUNT') {
                     if (parm.product == product_n && that.typeP >= parm.q) {
-                        console.log("entrei 2");
                         that.total += parm.value;
                         that.total -= that.price;
                     }
                 } else {
                     if (product_n == "Classic" && that.typeC == parm.take) {
-                        // console.log("entrei 2");
                         that.total += 0;
                         that.total -= that.price;
                     }

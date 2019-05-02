@@ -16,6 +16,7 @@ Empresa Catho com as tecnologias Nodejs + Mysql + Angular
 
 #### WebService
 * Com o banco de dados criado e populado
+  *Foi ultilizado versão do Node: 11.9.0
   * Entrar na pasta "backend/enum", abrir o arquivo config.js e modificar os dados de acesso ao banco   
   * Password pode ser alterada 
   * Padrão: Host: '127.0.0.1'   User: 'root'    Password: ''   Database: "catho"
