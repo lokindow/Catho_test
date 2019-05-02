@@ -42,7 +42,7 @@ class RuleController{
             if(data.length == 0){
                 res.json({ message: 'Regra não encontrado', erro: [], retorno: data });    
             }else{
-                res.json({ message: 'Regra encontrada', erro: [], retorno: data[0] });
+                res.json({ message: 'Regra encontrada', erro: [], retorno: data });
             }
 
             next();

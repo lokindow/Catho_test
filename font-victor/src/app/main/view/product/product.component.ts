@@ -47,6 +47,7 @@ export class ProductComponent implements OnInit {
         this.selectE = true;
     }
 
+    // Adiciona um novo produto
     public async add(product_n) {
         let nameProduct = product_n;
         let nameClent = this.itemSelecionado.nome;
@@ -60,43 +61,45 @@ export class ProductComponent implements OnInit {
             this.typeC += 1;
         } else if (product_n == "Standout") {
             this.typeS += 1;
-        } else {
+        } else if (product_n == "Premium") {
             this.typeP += 1;
         }
-
         this.rule(product_n);
-        console.log(this.total);
-
     }
 
+    // Abri o modal de chekout
     public check() {
-        let param = JSON.stringify({ product: this.order, price: this.subtotal });
-        this.orderService.insert(param).then(resp => { console.log(resp) });
+        // let param = JSON.stringify({ product: this.order, price: this.subtotal });
+        // this.orderService.insert(param).then(resp => { console.log(resp) });
         this.modalDialogConfirm.open();
     }
 
+    // Regras atreladas aos requisitos
     public rule(product_n) {
         const that = this;
-        let e = true;
         if (this.itemSelecionado.name != "Default") {
             this.ruleService.consult(this.itemSelecionado.id).then(resp => {
-                let parm = JSON.parse(resp.retorno.param)
-                if (resp.retorno.prefix == 'DISCOUNT') {
-                    if (parm.product == product_n) {
-                        that.total += parm.value;
-                        that.total -= that.price;
+                Object.keys(resp.retorno).map(resposta => {
+                    let parm = resp.retorno[resposta];
+                    let p = JSON.parse(parm.param);
+
+                    if (parm.prefix == 'DISCOUNT') {
+                        if (p.product == product_n) {
+                            that.total += p.value;
+                            that.total -= that.price;
+                        }
+                    } if (parm.prefix == 'QUANTITY_DISCOUNT') {
+                        if (p.product == product_n && that.typeP >= p.q) {
+                            that.total += p.value;
+                            that.total -= that.price;
+                        }
+                    } if (parm.prefix == 'TAKE_MORE_PAY') {
+                        if (product_n == "Classic" && that.typeC == parm.take) {
+                            that.total += 0;
+                            that.total -= that.price;
+                        }
                     }
-                } else if (resp.retorno.prefix == 'QUANTITY_DISCOUNT') {
-                    if (parm.product == product_n && that.typeP >= parm.q) {
-                        that.total += parm.value;
-                        that.total -= that.price;
-                    }
-                } else {
-                    if (product_n == "Classic" && that.typeC == parm.take) {
-                        that.total += 0;
-                        that.total -= that.price;
-                    }
-                }
+                });
             });
         }
         this.total += this.price;

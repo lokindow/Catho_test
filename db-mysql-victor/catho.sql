@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Maio-2019 às 07:11
+-- Generation Time: 02-Maio-2019 às 21:24
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.4
 
@@ -104,7 +104,7 @@ CREATE TABLE `rules` (
 --
 
 INSERT INTO `rules` (`id`, `client`, `prefix`, `description`, `param`) VALUES
-(1, 3, 'QUANTITY_DISCOUNT', 'Gets a discount on Premium Ads where 4 or more are purchased. The price drops to $379.99 per ad', '{\"value\":379.99, \"product\": \'Premium\', \"q\": 4}'),
+(1, 3, 'QUANTITY_DISCOUNT', 'Gets a discount on Premium Ads where 4 or more are purchased. The price drops to $379.99 per ad', '{\"value\":379.99, \"product\": \"Premium\", \"q\": 4}'),
 (2, 1, 'DISCOUNT', 'Gets a discount on Standout Ads where the price drops to $299.pp per ad', '{\"value\": 299.99, \"product\": \"Standout\"}'),
 (3, 2, 'TAKE_MORE_PAY', 'Gets a for 3 for 2 deal on Classic Ads', '{\"take\": 2, \"free\": 1, \"product\": 1}'),
 (4, 4, 'TAKE_MORE_PAY', 'Gets a 5 for 4 deal on Classic Ads', '{\"take\": 4, \"free\": 2, \"product\": 1}'),

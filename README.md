@@ -33,6 +33,13 @@ $ node ./backend/index.js
 ```sh
 $ npm start
 ```    
+
+ #### Ferramentas
+* Ferramentas ultilizadas:
+  * Node com restify pra cirar as rotas
+  * Mysql pro banco de dados
+  * Angular com componentes SASS e SCSS
+
 * Abrir no navegador (http://localhost:4200)
 * Pode ser alterado no pack.json
 * Abrirá o sistema no login 

@@ -55,7 +55,7 @@
             <div style="float: right; height: 20px; margin-right: 15px">
                 <amb-action-icon icon='fa fa-check circle-icon' (click)="check()" color="white" padding="10px"
                     ambTooltip="Submit" backgroundColor="#cc2031"></amb-action-icon>
-                <p>SUBTOTAL {{subtotal.toFixed(2)}}</p>
+                <p>SUBTOTAL : ${{subtotal.toFixed(2)}}</p>
             </div>
             <div class="v-gap-10"></div>
             <div class="v-gap-10"></div>
@@ -105,12 +105,12 @@
             titleBackgroundColor="#333333" titleColor="black">
             <amb-modal-dialog-message>
                 <h2 class="subtitulo">ORDER CONFIRMED</h2>
-                <p>PRODUCT</p>
+                <p class="red">PRODUCT</p>
                 <p>CLASSIC:  {{typeC}}</p>
                 <p>STANDOUT : {{typeS}}</p>
                 <p>PREMIUM:  {{typeP}}</p>
                 <amb-separator></amb-separator>
-                <p>PRICE</p>
+                <p class="red">PRICE</p>
                 <p>DISCOUNT : ${{subtotal - total}}</p>
                 <p>TOTAL:  ${{total.toFixed(2)}}</p>
                 <div class="block-b" style="text-align: center">
