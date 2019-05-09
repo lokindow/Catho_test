@@ -7,9 +7,7 @@ Tecnologias Usadas: Nodejs + MySql + Angular
 
 #### Requisitos para Montar o Ambiente:
 * Nodejs pode ser adquirido pelo site oficial do Nodejs: https://nodejs.org/en/download/
-<br/>
 * Angular CLi pode ser adquirido pelo comando npm: "npm install -g @angular/cli" para mais informações o site oficial: https://cli.angular.io/
-<br/>
 * Banco de Dados Mysql(Obs: Existem diferentes formas de configurar vou falar uma delas usando XAMPP) para instalar o XAMPP site: https://www.apachefriends.org/pt_br/index.html baixar na sua plataforma.
 	* Após o download dar start no PHP e no MYSQL( Obs: Dar start no PHP para usar a ferramenta phpmyadmin) ir no navegador e colocar a URL : http://localhost/phpmyadmin/ , na barra horizontal selecionar SQL e colar o arquivo 'catho' que está na pasta 'db-mysql-victor' pronto MySQL configurado e rodando. 
 
