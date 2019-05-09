@@ -19,7 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `catho`
+-- CREATE DATABASE "catho" ---------------------------------
+CREATE DATABASE IF NOT EXISTS `catho` CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `catho`;
+-- ---------------------------------------------------------
 --
 
 -- --------------------------------------------------------

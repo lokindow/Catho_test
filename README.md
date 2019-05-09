@@ -1,59 +1,50 @@
-# Catho
-Empresa Catho com as tecnologias Nodejs + Mysql + Angular 
+# Teste feito para Catho
+Tecnologias Usadas: Nodejs + MySql + Angular
 
-#### Documentos
-* O documento com a descrição do teste está na pasta "doc-catho"
-
-#### Requisitos
-* Node devidamente configurado e rodando
-* Angular Cli configurado e rodando
-* Banco Mysql devidamente configurado e rodando
-
-#### Banco de Dados
-* Criar um banco com nome: 'catho'   
-  * Entrar na pasta "db" e rodar no banco mysql o arquivo vic-db.sql    
-  * Será criado algumas tabelas do db 'catho'
-
-#### WebService
-* Com o banco de dados criado e populado
-  *Foi ultilizado versão do Node: 11.9.0
-  * Entrar na pasta "backend/enum", abrir o arquivo config.js e modificar os dados de acesso ao banco   
-  * Password pode ser alterada 
-  * Padrão: Host: '127.0.0.1'   User: 'root'    Password: ''   Database: "catho"
-  * Pode ser alterado no arquivo"
-  * Depois de configurado, rode script "backend/index.js" pelo terminal
-```sh
-$ node ./backend/index.js
-```
-  * PS: Por padrão, rodará na porta 8080, se desejar mudar, abra o arquivo "backend/index.js" e modifique na linha 15. Em seguida abra o arquivo "frontend/src/app/enum/config.enum.ts" e mude no endereço também.
-
- #### Rodando o front em angular
-* Agora com o Mysql rodando e populado e o WebService rodando
-  * Entrar na pasta "front-victor" e rodar o seguinte comando:
-```sh
-$ npm start
-```    
-
- #### Ferramentas
-* Ferramentas ultilizadas:
-  * Node com restify pra cirar as rotas
-  * Mysql pro banco de dados
-  * Angular com componentes SASS e SCSS
-
-* Abrir no navegador (http://localhost:4200)
-* Pode ser alterado no pack.json
-* Abrirá o sistema no login 
-   
-* Produtos
-  * Fazer a adição dos produtos que mais agrada
-  * Faz um subtotal sem os devidos abatimentos por regra
-
-* Confimação
-  *Apresenta os descontos obtidos pelo desconto do plano
-  *Apresenta os produtos adquiridos 
-  * Valor total com as alterações
+####Documento do Teste:
+	* Está dentro da pasta 'doc-catho'
 
 
+####Requisitos para Montar o Ambiente:
+	* Nodejs pode ser adquirido pelo site oficial do Nodejs: https://nodejs.org/en/download/
 
-* Cliente não cadastrado, entra nos preços padrões de todos os produtos
- 
+	* Angular CLi pode ser adquirido pelo comando npm: "npm install -g @angular/cli" para mais informações o site oficial: https://cli.angular.io/
+
+	* Banco de Dados Mysql(Obs: Existem diferentes formas de configurar vou falar um deles usando XAMPP) para instalar o XAMPP site: https://www.apachefriends.org/pt_br/index.html Baixar na sua plataforma.
+		* Após o download dar start no PHP e no MYSQL(Obs:Dar start no PHP para usar a ferramenta phpmyadmin) ir no navegador e colocar a URL : http://localhost/phpmyadmin/ , na barra horizontal selecionar SQL e colar o arquivo 'catho' que está na pasta 'db-mysql-victor' pronto MySQL configurado e rodando. 
+
+
+####BackEnd:
+	* Entrar na pasta 'backend-victor' 
+	* Abrir o Terminal ou CMD e digitar: ```sh node ./index.js ```
+	* Pronto Backend está sendo executado na porta 8080
+	* (Obs: Caso queria editar configurações do banco de dados está na pasta 'enum' onde tem por default -> Host: '127.0.0.1' User: 'root' Password: '' Database: "catho")
+
+####FrontEnd:
+	* Entrar na pasta 'font-victor'
+	* Abrir o Terminal ou CMD e digitar:  ```sh npm start ```
+	* Pronto Frontend está sendo executado na porta 4200
+	* Abra o Navegador : http://localhost:4200/
+	* (Obs: Caso queria alterar a porta do Frontend pode ser alterado no arquivo 'package.json' onde está 4200 para a porta desejada)
+
+
+####Bibliotecas Ultilizadas:
+	* Node com restify pra cirar as rotas
+	* Mysql no Nodejs
+	* Angular com componentes SASS e SCSS
+	* Jquery
+
+####Sistema:
+	*Irá abrir a tela de login e usuario já cadastrado no Banco de Dados: User'root' e password'1234'
+	* Aparecerá um modal para escolha de cliente já parceiro ou podendo colocar o nome da sua empresa.
+	* Será redirecionado para tela de produtos e lá pode adicionar os produtos a sacola, mostrando o subtotal.
+	* Ao clicar em subimit será aberto um Modal de fechamento de pedido aplicando as regras de descontos de acordo com cada tipo de cliente
+	* Podendo clicar em confirmar a compra será redirecionado para o login
+
+####OBS:
+	*Node Ultilizado: v10.15.3
+	* Caso de o erro: 'Cannot GET /' no navegador é a versão do Nodejs que está ultilizando.
+
+####Dúvidas:
+	*João Victor Fornitani
+	* jfornitani@hotmail.com
