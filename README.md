@@ -5,7 +5,7 @@ Tecnologias Usadas: Nodejs + MySql + Angular
 * Está dentro da pasta 'doc-catho'
 
 #### Importante:
-	* Descompactar o arquivo -> 'node_modules.zip' de dentro da pasta 'front-victo' 
+	* Descompactar o arquivo -> 'node_modules.zip' de dentro da pasta 'front-victor' 
 
 
 #### Requisitos para Montar o Ambiente:
