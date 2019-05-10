@@ -4,6 +4,9 @@ Tecnologias Usadas: Nodejs + MySql + Angular
 #### Documento do Teste:
 * Está dentro da pasta 'doc-catho'
 
+#### Importante:
+	* Descompactar o arquivo -> 'node_modules.zip' de dentro da pasta 'front-victo' 
+
 
 #### Requisitos para Montar o Ambiente:
 * Nodejs pode ser adquirido pelo site oficial do Nodejs: https://nodejs.org/en/download/
@@ -20,6 +23,7 @@ Tecnologias Usadas: Nodejs + MySql + Angular
 
 #### FrontEnd:
 * Entrar na pasta 'font-victor'
+* Lembrete para descompactar o arquivo 'node_modules.zip'
 * Abrir o Terminal ou CMD e digitar:  ``` npm start ```
 * Pronto Frontend está sendo executado na porta 4200
 * Abra o Navegador : http://localhost:4200/
