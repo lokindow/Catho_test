@@ -67,6 +67,24 @@ export class ProductComponent implements OnInit {
         this.rule(product_n);
     }
 
+    public async remove(product_n) {
+        this.price = await this.productService.consult(product_n).then(resp => { return resp.retorno.price }) - 0.01;
+
+        if (product_n == "Classic" && this.typeC >= 1) {
+            this.typeC -= 1;
+            this.subtotal -= this.price;
+            this.total -= this.price;
+        } else if (product_n == "Standout" && this.typeS >= 1) {
+            this.typeS -= 1;
+            this.subtotal -= this.price;
+            this.total -= this.price;
+        } else if (product_n == "Premium" && this.typeP >= 1) {
+            this.typeP -= 1;
+            this.subtotal -= this.price;
+            this.total -= this.price;
+        }
+    }
+
     // Abri o modal de chekout
     public check() {
         // let param = JSON.stringify({ product: this.order, price: this.subtotal });

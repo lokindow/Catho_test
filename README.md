@@ -46,6 +46,7 @@ Tecnologias Usadas: Nodejs + MySql + Angular
 #### OBS:
 * Node Ultilizado: v10.15.3
 * Caso de o erro: 'Cannot GET /' no navegador é a versão do Nodejs que está ultilizando.
+* Caso apareça NaN, é que porque o banco de dados está desativado ou com acesso negado.
 * Confira se o Backend, Frontend e DB estão ativos.
 
 #### Dúvidas:
