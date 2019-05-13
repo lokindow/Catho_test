@@ -13,7 +13,7 @@ import { Type } from '@angular/compiler/src/output/output_ast';
     styleUrls: ['../../main.component.scss', './product.component.scss']
 })
 
-export class ProductComponent implements OnInit {
+export class ProductComponent {
 
     @ViewChild('empresa_modal') modalDialog: AMBModalDialogComponent;
     @ViewChild('confirm_modal') modalDialogConfirm: AMBModalDialogComponent;
@@ -66,7 +66,7 @@ export class ProductComponent implements OnInit {
         }
         this.rule(product_n);
     }
-
+     // Remove um produto
     public async remove(product_n) {
         this.price = await this.productService.consult(product_n).then(resp => { return resp.retorno.price }) - 0.01;
 
@@ -133,8 +133,6 @@ export class ProductComponent implements OnInit {
         this.selectE = true;
     }
 
-    ngOnInit() {
-        const that = this;
         // Adicionar Objeto
         // Object.assign()
 
@@ -152,8 +150,6 @@ export class ProductComponent implements OnInit {
 
         // Preço do produto
         // this.productService.consult(product_n).then(resp => {resp.retorno.price});
-
-    }
 }
 
 

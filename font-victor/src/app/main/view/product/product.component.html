@@ -15,9 +15,10 @@
                         </div>
                         <h3>Classic AD</h3>
                         <p>Offers the most basic level of advertisement</p>
+                        <p>Price: $269.99</p>
                         <div style="margin: 0px auto; height: 20px; display: block">
                             <amb-action-icon icon='fa fa-minus circle-icon' (click)="remove('Classic')" color="white"
-                            padding="10px" backgroundColor="#cc2031"></amb-action-icon>
+                                padding="10px" backgroundColor="#cc2031"></amb-action-icon>
                             <amb-action-icon icon='fa fa-plus circle-icon' (click)="add('Classic')" color="white"
                                 padding="10px" backgroundColor="#cc2031"></amb-action-icon>
                         </div>
@@ -37,9 +38,10 @@
                         </div>
                         <h3>Standout AD</h3>
                         <p>Allows advertisers to use a company logo and use a longer presentation text</p>
+                        <p>Price: $322.99</p>
                         <div style="margin: 0px auto; height: 20px; display: block">
                             <amb-action-icon icon='fa fa-minus circle-icon' (click)="remove('Standout')" color="white"
-                            padding="10px" backgroundColor="#cc2031"></amb-action-icon>
+                                padding="10px" backgroundColor="#cc2031"></amb-action-icon>
                             <amb-action-icon icon='fa fa-plus circle-icon' (click)="add('Standout')" color="white"
                                 padding="10px" backgroundColor="#cc2031"></amb-action-icon>
                         </div>
@@ -60,6 +62,7 @@
                         <h3>Premium AD</h3>
                         <p>Same benefits as Standout Ad, but also puts the advertisement at the top of the results,
                             allowing higher visibility</p>
+                        <p>Price: $394.99</p>
                         <div style="margin: 0px auto; height: 20px; display: block">
                             <amb-action-icon icon='fa fa-minus circle-icon' (click)="remove('Premium')" color="white"
                                 padding="10px" backgroundColor="#cc2031"></amb-action-icon>
@@ -105,7 +108,7 @@
             <amb-modal-dialog-message>
 
                 <div class="form block-b c-w">
-                    <label>JÁ É PARCEIRO ?</label>
+                    <label>Already a Partner ?</label>
 
                     <amb-combobox id="comboEmpresa" (comboChange)="getItemSelecionado($event)">
                         <amb-combobox-item *ngFor="let item of empresa" [model]="item" [value]="item.id"
@@ -115,7 +118,7 @@
                 </div>
 
                 <div class="form block-b c-w">
-                    <label>NÃO</label>
+                    <label>No</label>
                     <input ambInputField [readonly]="false" value="" [(ngModel)]="user" type="text">
                 </div>
 
